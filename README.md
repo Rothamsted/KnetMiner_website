@@ -1,2 +1,2 @@
 # KnetMiner_website
-The new KnetMiner webiste
+The new (revamped) KnetMiner landing page
