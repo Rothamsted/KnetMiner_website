@@ -8,3 +8,4 @@ Thumbs.db
 
 # Ignore videos from Commit #
 *.mp4
+*.mov
