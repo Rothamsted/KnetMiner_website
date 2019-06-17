@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   
+    <title>KnetMiner</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="style_knetminer.css" rel="stylesheet">
+   	<link href="https://fonts.googleapis.com/css?family=Kanit|Play" rel="stylesheet">    <!-- used font is Play -->
+
+	 <link rel="shortcut icon" href="images/favicon.ico" >
+    
+    <meta name="description" content="KnetMiner, with a silent K and standing for Knowledge Network Miner, is a suite of open-source software tools for gene mining and biological knowledge discovery.">
+	<meta name="Keywords" content="KnetMiner, software, tool, Gene, Genome, QTL, Ondex, GWAS, Plant, Crop, Big Data, Data Mining, Candidate Gene, Ranking, Prioritization, Bioinformatics, Visualization" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+     <script src="https://use.fontawesome.com/a90751c39e.js"></script>
+<!-- Google Analytics -->  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-88753233-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+  <body>
+  
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+    <!-- mobile display -->
+    <div class="navbar-header"> 
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Menue hide/unhide</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>	
+	  
+    	<a href="http://knetminer.rothamsted.ac.uk/"><img class="logo-top" src="images/logo-regular.png" height="50" alt="Logo"></a>
+     </div>
+     <div class="navi collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav" id="top">
+      <li><a target="_blank" href="https://github.com/Rothamsted/knetminer/releases">What's new?</a></li>
+      <li><a target="_blank" href="http://knetminer.rothamsted.ac.uk/KnetMiner_Tutorial.pdf">User Guide</a></li>
+      <li><a href="publications.html">Publications</a></li>    
+    </ul>
+    </div>
+   </div>
+ </nav>  <!-- end navbar -->
+ 
+  <div class="carousel">
+<!--carousel -->
+<div id="my-carousel" class="carousel slide" data-interval="false">
+	<ol class="carousel-indicators">
+		<li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+		<li data-target="#my-carousel" data-slide-to="1"></li>
+		<li data-target="#my-carousel" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner" role="listbox">
+		<div class="item active">
+        <img class="slide" src="images/first-pic2.jpg" alt="First Slide"> 		
+			<div class="carousel-caption">
+           <h1 class="subtitle">KnetMiner web app and knowledge graphs</h1>
+            <h2>Making biological discoveries faster and fun</h2>
+			</div>
+		</div>
+		<div class="item">
+           <img class="slide" src="images/3field.jpg" alt="Second Slide"> 
+			<div class="carousel-caption">
+             <h1 class="subtitle">Telling the stories of complex traits</h1>
+            <h2>From genotype to phenotype via gene networks</h2>
+			</div>
+		</div>
+		<div class="item">
+			<img class="slide" src="images/test2.jpg" alt="Third Slide"> 
+			<div class="carousel-caption">
+               <h1 class="subtitle">Connecting data, technology and humans</h1>
+            <h2>To provide the best user experience</h2>
+			</div>
+		</div>
+	</div> <!-- End carousel-inner -->
+	
+	<!-- Glyphicon carousel -->
+	<a class="left carousel-control" href="#my-carousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </a>
+    <a class="right carousel-control" href="#my-carousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </a>
+	
+    </div>
+	</div>				<!-- End carousel -->
+ 
+<!-- Video carousel -->    
+<div class="slider-container hidden-xs">
+    <div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12">
+                <div id="Carousel" class="carousel slide" data-interval="false">
+                 
+                <ol class="carousel-indicators">
+                    <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carousel" data-slide-to="1"></li>
+                    <li data-target="#Carousel" data-slide-to="2"></li>
+                </ol>
+                 
+                <!-- Carousel items -->
+                <div class="carousel-inner">                  
+                <div class="item active">
+                <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                	<video controls width="300" class="video-geno">
+                		<source src="videos/KnetMiner-About.mp4" type="video/mp4"/>
+                 	</video>
+                	<h4 class="text-video"><strong>Introducing KnetMiner</strong></h4>
+                 	<p class="text-video">Short clip to introduce the KnetMiner approach</p>
+                 </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                	<video controls width="300" class="video-geno">
+                		<source src="videos/Wheat-KnetMiner-v2.mp4" type="video/mp4"/>
+                 	</video>
+                	<h4 class="text-video"><strong>KnetMiner Overview</strong></h4>
+                 	<p class="text-video">KnetMiner user interface and key features</p>
+                 </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                	<video controls width="300" class="video-geno">
+                		<source src="videos/Video2.mp4" type="video/mp4" />
+                	</video>
+                	<h4 class="text-video"><strong>KnetMiner Networks</strong></h4>
+    				<p class="text-video">Visualising knowledge networks in the interactive KnetMaps.js</p>
+                </div>
+                	</div><!--.row-->
+                </div><!--.item-->
+                 
+                <div class="item">
+                	<div class="row">
+                	  <div class="col-sm-4 col-md-4">
+                      <video controls width="300" class="video-geno">
+                    <source src="videos/Video3.mp4" type="video/mp4" />
+                  </video>
+                 <h4 class="text-video"><strong>Connecting the dots with KnetMiner</strong></h4>
+    			<p class="text-video">Interrogating GWAS and interaction data to unveil complex traits in Arabidopsis.</p>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                      <video controls width="300" class="video-geno">
+                    <source src="videos/GenoMap.mp4" type="video/mp4" />
+                  </video>
+                 <h4 class="text-video"><strong>KnetMiner Map View</strong></h4>
+    			<p class="text-video">Visualising GWAS, QTL, SNP and genes in the interactive Genomaps.js</p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                	<video controls width="300" class="video-geno">
+                		<source src="videos/KnetMiner-Intro.mp4" type="video/mp4"/>
+                 	</video>
+                	<h4 class="text-video"><strong>KnetMiner walkthrough</strong></h4>
+                 	<p class="text-video">Using the KnetMiner search interface and exploring networks</p>
+                 </div>
+                	</div><!--.row-->
+                </div><!--.item-->
+                <div class="item">
+                	<div class="row">
+					  <div class="col-sm-4 col-md-4">
+					  <img class="video-geno" src="images/new-videos.jpg"/>
+					  <h4 class="text-video"><strong>We are working on more new videos</strong></h4>
+					  </div>
+                	</div><!--.row-->
+                </div><!--.item-->
+                 
+                </div><!--.carousel-inner-->
+                  <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                  <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                </div><!--.Carousel-->                 
+		</div>
+	</div>
+</div><!--.container-->
+
+<!--video carousel for mobile devices-->
+
+<div id="video-carousel" class="carousel hidden-sm hidden-md hidden-lg">
+<!--carousel -->
+<div class="carousel slide">
+	<ol class="carousel-indicators">
+		<li data-target="#video-carousel" data-slide-to="0" class="active"></li>
+		<li data-target="#video-carousel" data-slide-to="1"></li>
+		<li data-target="#video-carousel" data-slide-to="2"></li>
+        <li data-target="#video-carousel" data-slide-to="3"></li>
+        <li data-target="#video-carousel" data-slide-to="4"></li>
+        <li data-target="#video-carousel" data-slide-to="5"></li>
+	</ol>
+	<div class="carousel-inner" role="listbox">
+		<div class="item active">
+                	<video controls width="300" class="video-geno">
+                		<source src="videos/KnetMiner-About.mp4" type="video/mp4"/>
+                 	</video>
+                	<h4 class="text-video"><strong>Introducing KnetMiner</strong></h4>
+                 	<p class="text-video">Short clip to introduce the KnetMiner approach</p>
+                </div>
+		<div class="item">
+                 	<video controls width="300" class="video-geno">
+                		<source src="videos/Wheat-KnetMiner-v2.mp4" type="video/mp4"/>
+                 	</video>
+                	<h4 class="text-video"><strong>KnetMiner Overview</strong></h4>
+                 	<p class="text-video">KnetMiner user interface and key features</p>
+		</div>
+		<div class="item">
+                	<video controls width="300" class="video-geno">
+                		<source src="videos/Video2.mp4" type="video/mp4" />
+                	</video>
+                	<h4 class="text-video"><strong>KnetMiner Networks</strong></h4>
+    			<p class="text-video">Visualising knowledge networks in the interactive KnetMaps.js</p>
+		</div>
+		<div class="item">
+                	<video controls width="300" class="video-geno">
+                    		<source src="videos/Video3.mp4" type="video/mp4" />
+                  	</video>
+                 	<h4 class="text-video"><strong>Connecting the dots with KnetMiner</strong></h4>
+    			<p class="text-video">Interrogating GWAS and interaction data to unveil complex traits in Arabidopsis.</p>
+		</div>
+        	<div class="item">
+                	<video controls width="300" class="video-geno">
+                    		<source src="videos/GenoMap.mp4" type="video/mp4" />
+                	</video>
+        		<h4 class="text-video"><strong>KnetMiner Map View</strong></h4>
+    			<p class="text-video">Visualising GWAS, QTL, SNP and genes in the interactive Genomaps.js</p>
+		</div>
+        	<div class="item">
+			<img class="video-geno" src="images/new-videos.jpg"/>
+            		<h4 class="text-video"><strong>We are working on new videos</strong></h4>
+		</div>
+ <!-- End carousel-inner --> 
+	
+	<!-- Glyphicon carousel -->
+	<a class="left carousel-control" href="#video-carousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>
+    </a>
+    <a class="right carousel-control" href="#video-carousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+    </a>
+	
+    </div>
+	</div><!-- End carousel -->
+</div><!-- End slider for mobile -->
+
+<!--  beginning of content -->
+<div id="content" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 container-fluid">  
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+             <h4>Examples of public KnetMiner species</h4>
+             </div>                   
+       		<div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">    <!-- div images-->			
+			 <!-- KetMiner Wheat -->
+          <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <a href="http://knetminer.rothamsted.ac.uk/Triticum_aestivum/">
+                <div class="subqtl">
+                	<div class="testpics">   
+                        <img class="testpics" src="images/pic_wheat1.png" width="170" height="170"/>
+                        <div class="mask">
+                        <p>Triticum aestivum</br>
+                        IWGSC RefSeq v1.1</p>
+                        </div>           
+                   	 	<span><p>Wheat</p></span>  
+                    </div>
+                </div>
+            </a>	
+        </div>
+        
+			<!-- KetMiner Arabidopsis -->
+			 <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        	<a href="http://knetminer.rothamsted.ac.uk/Arabidopsis_thaliana/">
+                <div class="subqtl">
+                    <div class="testpics">
+                    	<img class="testpics" src="images/pic_arabidopsis1.png" width="170" height="170"/>
+                        <div class="mask">
+                        <p>Arabidopsis thaliana</br>
+                        TAIR10</p>
+                        </div>           
+                   	 	<span><p>Arabidopsis</p></span>  <!-- &nbsp; needed to center short names-->
+                    </div>                   
+                </div>
+            </a>
+			</div>
+            
+			<!-- KetMiner Rice (IRRI) -->
+            <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <a href="http://knetminer.rothamsted.ac.uk/Oryza_sativa/">
+                <div class="subqtl">
+                	<div class="testpics">   
+                        <img class="testpics" src="images/Rice.jpg" width="170" height="170"/>
+                        <div class="mask">
+                        <p>Oryza sativa Japonica</br>
+                        IRGSP-1.0</p>
+                        </div>           
+                   	 	<span><p>Rice</p></span>  <!-- &nbsp; needed to center short names-->
+                    </div>
+                </div>
+            </a>
+			</div>
+			
+			 <!-- KetMiner Maize -->
+<!--			 <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-3">
+			<a href="http://knetminer.rothamsted.ac.uk/Zea_mays/">
+                <div class="subqtl">
+                     	<div class="testpics">
+                            <img class="testpics" src="images/pic_maize.png" width="170" height="170"/>
+                            <div class="mask">
+                            <p>Zea mays</br>
+                        AGPv4</p>
+                        </div>           
+                   	 	<span><p>Maize</p></span>  
+                      </div>
+                </div>
+            </a>
+			</div> -->
+            
+			 <!-- KetMiner B.oleracea -->
+<!--			 <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-3">
+			<a href="https://qtlnetminerboleracea.appliedbioinformatics.com.au/">
+                <div class="subqtl">
+                	<div class="testpics">
+                    	<img class="testpics" src="images/pic_boleracea_new.png" width="170" height="170"/>
+                        <div class="mask">
+                        <p>B.oleracea</br>
+                        Version 3.0.0</p>
+                        </div>                  
+                    	<span><p>B.oleracea</p></span>                   	 	
+                    </div>
+                </div>
+            </a>
+			</div> -->
+
+			 <!-- KetMiner Cicer -->
+<!--			 <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-3">
+			<a href="http://qtlnetminercicer.appliedbioinformatics.com.au/">           
+                <div class="subqtl">  	
+                    	<div class="testpics">                       
+                     		<img class="testpics" src="images/chickpea.png" width="170" height="170"/>
+                            <div class="mask">
+                            <p>Chickpea</br>
+                        Version 3.0.0</p>
+                        </div>           
+                   	 	<span><p>Chickpea</p></span>
+                    </div>
+                </div>
+            </a>
+			</div> -->
+			
+			 <!-- KetMiner Poplar -->
+<!--			 <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-3">
+            <a href="http://knetminer.rothamsted.ac.uk/Populus_trichocarpa/">
+                <div class="subqtl">
+                   	 	<div class="testpics">
+                            <img class="testpics" src="images/pic_poplar1.png" width="170" height="170"/>
+                            <div class="mask">
+                            <p>Populus trichocarpa</br>
+                        Version 3.1</p>
+                        </div>           
+                   	 	<span><p>Poplar</p></span>  
+                     	</div> 
+                </div>
+            </a>
+			</div> -->
+			
+			 <!-- KetMiner Solanaceae -->
+<!--		 <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-3">
+            <a href="http://knetminer.rothamsted.ac.uk/Solanaceae/">
+                <div class="subqtl">
+                	<div class="testpics">
+                        <img class="testpics" src="images/sol1.png" width="170" height="170"/>
+                        <div class="mask">
+                        <p>Solanacea</br>
+                        SL2.50</p>
+                        </div>           
+                   	 	<span><p>Solanaceae</p></span>
+                    </div>
+                </div>
+            </a>
+			</div> -->
+            
+			 <!-- KetMiner Potato -->
+<!--			 <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-3">
+            <a href="http://knetminer.rothamsted.ac.uk/Solanum_tuberosum/">
+                <div class="subqtl">
+                 	<div class="testpics">
+                        <img class="testpics" src="images/pic_potato1.png" width="170" height="170"/>
+                        <div class="mask">
+                        <p>Solanum tuberosum</br>
+                        SolTub_3.0</p>
+                        </div>           
+                   	 	<span><p>Potato</p></span>  
+                      </div>
+                </div>
+            </a>
+			</div> -->
+            
+			 <!-- KetMiner Barley -->
+<!--             <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-3">
+			 <a href="http://knetminer.rothamsted.ac.uk/Hordeum_vulgare/">
+                <div class="subqtl">  
+                <div class="testpics">        
+                    <img class="testpics" src="images/pic_barley1.jpg" width="170" height="170"/>
+                    <div class="mask">
+                    <p>Hordeum vulgare</br>
+                        ASM32608v1</p>                       
+                    </div>           
+                    <span><p>Barley</p></span>  
+               	 	</div>
+                </div>
+            </a>
+            </div> -->
+            
+			 <!-- KetMiner Chicken -->
+<!--       <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-3">
+        	<a href="http://knetminer.rothamsted.ac.uk/Gallus_gallus/">
+                <div class="subqtl">
+                    	<div class="testpics">
+                            <img class="testpics" src="images/pic_chicken.png" width="170" height="170"/>
+                            <div class="mask">
+                            <p>Chicken</br>
+                        Version 3.0.1</p>
+                        </div>           
+                   	 	<span><p>Chicken</p></span> 
+                     	</div>
+                </div>
+            </a>
+            </div> -->
+            
+			 <!-- KetMiner Cow -->
+<!--			  <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-3">
+            <a href="http://knetminer.rothamsted.ac.uk/Bos_taurus/">
+                <div class="subqtl">
+                    <div class="testpics">
+                        <img class="testpics" src="images/pic_cow1.png" width="170" height="170"/>
+                        <div class="mask">
+                        <p>Cow</br>
+                        Version 3.0.1</p>
+                        </div>           
+                   	 	<span><p>Cow</p></span> 
+                     </div>
+                </div>
+            </a>
+			</div> -->
+                 
+			 <!-- KetMiner Pig -->
+<!--            <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-3">
+            <a href="http://knetminer.rothamsted.ac.uk/Sus_scrofa/">
+                <div class="subqtl">
+                   	 <div class="testpics">
+                        <img class="testpics" src="images/pic_pig1.png" width="170" height="170"/>
+                        <div class="mask">
+                        <p>Pig</br>
+                        Version 3.0.1</p>
+                        </div>           
+                   	 	<span><p>Pig</p></span>  
+                    </div>
+                </div>          
+            </a>           
+            </div> -->
+			
+			 <!-- KetMiner Willow -->
+		<!--	 <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-3">
+            <a href="http://knetminer.rothamsted.ac.uk/Salix_viminalis/">
+                <div class="subqtl">
+                	<div class="testpics">   
+                        <img class="testpics" src="images/willow.jpg" width="170" height="170"/>
+                        <div class="mask">
+                        <p>Willow</br>
+                        Version 3.0.1</p>
+                        </div>           
+                   	 	<span><p>Willow</p></span>  
+                    </div>
+                </div>
+            </a>
+			</div>   -->
+			
+			 <!-- KetMiner Human-Disease -->
+            <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <a href="http://knetminer.rothamsted.ac.uk/HumanDisease/">
+                <div class="subqtl">
+                   	 <div class="testpics">
+                        <img class="testpics" src="images/humanDisease.png" width="170" height="170"/>
+                        <div class="mask">
+                        <p>Human Diseases</br>
+                        GRCh38</p>
+                        </div>           
+                   	 	<span><p>Human Diseases</p></span>  
+                    </div>
+                </div>          
+            </a>
+            </div>	
+			
+			 <!-- KetMiner Fusarium -->
+            <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <a href="http://knetminer.rothamsted.ac.uk/Fusarium_graminearum/">
+                <div class="subqtl">
+                	<div class="testpics">   
+                        <img class="testpics" src="images/PlantDisease_fusarium.jpg" width="170" height="170"/>
+                        <div class="mask">
+                        <p>Fusarium graminearum</br>
+                        Version RR1.36</p>
+                        </div>           
+                   	 	<span><p>F.graminearum</p></span>  <!-- &nbsp; needed to center short names-->
+                    </div>
+                </div>
+            </a>
+			</div>
+
+			 <!-- KetMiner Zymoseptoria -->
+            <div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <a href="http://knetminer.rothamsted.ac.uk/Zymoseptoria_tritici/">
+                <div class="subqtl">
+                	<div class="testpics">   
+                        <img class="testpics" src="images/PlantDisease.jpg" width="170" height="170"/>
+                        <div class="mask">
+                        <p>Zymoseptoria tritici</br>
+                        Version MG2.36</p>
+                        </div>           
+                   	 	<span><p>Z.tritici</p></span>  <!-- &nbsp; needed to center short names-->
+                    </div>
+                </div>
+            </a>
+			</div>
+			
+            <!--<div class="network-images col-xs-4 col-sm-4 col-md-4 col-lg-3">
+			<a href="https://github.com/KeywanHP/KnetMiner/wiki/Creating-a-novel-knowledge-network-for-KnetMiner/">
+                <div class="subqtl">
+                	<div class="testpics">   
+                        <img class="testpics" src="images/placeholder.jpg" width="170" height="170"/>
+                        <div class="mask">
+                        </div>           
+                    </div>
+                </div>
+           	</a>
+			</div> -->
+			
+           	</div> 				<!-- end div images--> 
+        
+         <div class="twitter container-fluid col-xs-12 col-sm-5 col-md-4 col-lg-4">   		
+                <a class="twitter-timeline" data-height="500" href="https://twitter.com/KnetMiner">Tweets by KnetMiner</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>		                                     
+    </div>		<!--       end div id=content  --> 
+	
+    
+    
+      <div class="overleaf col-xs-12 col-sm-12 col-md-12 col-lg-12 container-fluid">
+      <!-- <h1 style="padding-left:20px;">Description and Features<span style="color:darkorange;opacity: 0.7;">...</span></h1> -->
+      <div class="row">
+    <div class="texty col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+    <i class="fa fa-share-alt fa-3x" aria-hidden="true"></i>
+    </div>
+   <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+    <h4><strong>About KnetMiner</strong></h4>
+    <p>KnetMiner, with a silent "K" and standing for Knowledge Network Miner, is a web-app that makes biological knowledge discovery faster and fun. 
+	    It helps scientists to connect and search across databases and the scientific literature to find links between genes, traits, diseases and many other types of biological information. 
+	    Try one of the public KnetMiner demo species.
+	 
+    </p>
+    </div>
+    </div>
+    <div class="texty col-xs-12 col-sm-6 col-md-6 col-lg-6">
+   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+    <i class="fa fa-connectdevelop fa-3x" aria-hidden="true"></i>
+    </div>
+   <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+    <h4><strong>KnetMiner knowledge graphs</strong></h4>
+    <p >KnetMiner knowledge graphs are built using the open-source <a title="Ondex-KnetBuilder" class="links-text" target="_blank" href="https://github.com/Rothamsted/ondex-knet-builder">
+    Ondex data integration platform</a> and are available in different flavours such as <a class="links-text" title="RDF" target="_blank" href="https://www.w3.org/RDF/">RDF</a> and <a class="links-text" title="Neo4j" target="_blank" href="https://www.neo4j.com">Neo4j</a>. 
+	    We are experts in data integration and offer our expertise as a service. We can build bespoke knowledge graphs for your species of interest.
+    
+    </p>
+    </div>
+     </div>
+     </div>
+     <div class="row">
+    <div class="texty col-xs-12 col-sm-6 col-md-6 col-lg-6">
+  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+    <i class="fa fa-search fa-3x" aria-hidden="true"></i>
+    </div>
+     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+    <h4><strong>Searching knowledge graphs</strong></h4>
+    <p>KnetMiner performs over 70 graph queries of varying depths to find paths between genes and evidence nodes. 
+	    It highlights paths that are more important and provides features to gradually expand networks. 
+	    KnetMiner knowledge graphs can also be searched programmatically through web APIs, Cypher and SPARQL endpoints.
+     </p>
+     </div>
+     </div>
+      <div class="texty col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+    <i class="fa fa-plus-square-o fa-3x" aria-hidden="true"></i>
+    </div>
+    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+    <h4><strong>Deploy KnetMiner in the cloud</strong></h4>
+    <p>KnetMiner can be deployed in the AWS Cloud using Docker. KnetMiner is also available as an App in the <a class="links-text" title="Genestack" target="_blank" href="http://www.genestack.com">Genestack</a> platform.
+     The KnetMiner-Genestack App allows users to integrate their own private data into the knowledge graph. For more information, read our <a class="links-text" title="KnetMiner-Genestack" target="_blank" href="https://www.rothamsted.ac.uk/news/visualising-data-connections-promises-faster-discoveries">press release</a> and request the <a class="links-text" title="KnetMiner-Genestack" target="_blank" href="https://genestack.com/landings/ebook-knetminer-multi-omics-network-mining/">KnetMiner-Genestack eBook</a>.
+    
+    </p>
+     </div>
+    </div>
+    </div>
+    <div class="row">
+     <div class="texty col-xs-12 col-sm-6 col-md-6 col-lg-6">
+   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+    <i class="fa fa-list-alt fa-3x" aria-hidden="true"></i>
+    </div>
+     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+    <h4><strong>KnetMiner Gene Rank</strong></h4>
+    <p>The KnetMiner Gene Rank algorithm  takes into account the specificity, connectivity and distance of each piece of evidence in the gene knowledge graph. 
+	    It is very fast through the use of a graph database and a pre-build index. 
+	    It's not always easy to rank genes, so KnetMiner allows users to refine the results using their own domain expertise and assumptions. 
+    </p>
+     </div>
+     </div>
+    <div class="texty col-xs-12 col-sm-6 col-md-6 col-lg-6">
+  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+     <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+    </div>
+     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+    <h4><strong>Working with us</strong></h4>
+    <p>Get in touch with us if you need <a class="links-text" title="Contact" target="_blank" href="contact.html">help</a>, have <a class="links-text" title="Git Issues" target="_blank" href="https://github.com/Rothamsted/knetminer/issues">feature requests</a> or would like to contribute to one of our <a class="links-text" title="GitHub" target="_blank" href="https://github.com/Rothamsted">open-source projects</a>. 
+    KnetMiner is used by thousands of users around the world from academia to industry. We aim to provide top user experience and always value user feedback.</p>
+     </div>
+     </div>
+     </div>
+    </div> 		<!--       end div --> 
+
+        <div class="contact-footer col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+       	<div class="left-footer col-xs-12 col-sm-12 col-md-4 col-lg-4">                                    		
+            <a target="_blank" title="Rothamsted Research" href="http://www.rothamsted.ac.uk/" class="logos"><img src="images/rothamsted_logo.png" width="80" height="80"/></a>  
+            <a target="_blank" title="BBSRC" href="http://www.bbsrc.ac.uk/" class="logos"><img class="bbsrc-logo" src="images/bbsrc_logo.png" width="194" height="78"/></a>
+        </div>  
+       <div class="contact-footer col-xs-12 col-sm-12 col-md-4 col-lg-4"> 
+      	<img class="knetminer-logo" src="images/logo-regular.png" alt="Logo" with="201.5" height="66.3">
+        <p id="text-logo">Supported by BBSRC grants <a class="links-text" title="DiseaseNetMiner" target="_blank" href="https://gtr.ukri.org/projects?ref=BB%2FN022874%2F1">BB/N022874/1</a> and <a class="links-text" title="DFW" target="_blank" href="https://gtr.ukri.org/projects?ref=BBS%2FE%2FC%2F000I0210">BBS/E/C/000I0210</a></p> 
+       </div> 
+    	<div class="right-footer col-xs-12 col-sm-12 col-md-4 col-lg-4">             
+           <a class="contact-button" title="Contact Page" href="contact.html"><h4 class="contact-button"><i class="glyphicon glyphicon-envelope" alt="envelope"></i>  Contact and find us</h4></a>
+           <p>keywan.hassani-pak@rothamsted.ac.uk </p>
+           <div class="twitter-buttons">
+           <a href="https://twitter.com/KnetMiner" class="twitter-follow-button" data-show-count="false">Follow @KnetMiner</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>   
+           </div>   
+ 	</div>
+ 	</div>
+
+
+  	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+   
+	<script src="js/jquery.mobile.custom.js"></script>
+    <script src="js/bootstrap.js"></script>
+	
+<!-- function for swipping the carousel on mobile devices -->    
+ <script>
+$(document).ready(function() {  
+   $("#my-carousel, #video-carousel, #Carousel").swiperight(function() {  
+      $(this).carousel('prev');  
+    });  
+   $("#my-carousel, #video-carousel, #Carousel").swipeleft(function() {  
+      $(this).carousel('next');  
+   });  
+});  
+</script>
+
+  </body>
+</html>
