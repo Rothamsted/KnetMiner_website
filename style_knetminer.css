@@ -61,7 +61,7 @@ ul#top.nav.navbar-nav a:hover {
 
 .navbar {
 	display:block;
-	height:51px;
+	height:76px/*51px*/;
 	box-shadow: 0 1px 5px;
 	background-color:#2A2A2A;
 	}
